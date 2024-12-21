@@ -1,0 +1,10 @@
+{
+  "name": "qkKoiKoi-Editor",
+  "references": [
+    "qkKoiKoi"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": []
+}

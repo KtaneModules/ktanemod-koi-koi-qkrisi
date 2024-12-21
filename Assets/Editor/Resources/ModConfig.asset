@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615501dbe4f3fe94fbf4b564abb10237, type: 3}
+  m_Name: ModConfig
+  m_EditorClassIdentifier: 
+  id: qkKoiKoi
+  title: Koi-Koi
+  author: Qkrisi
+  description: 'Wait... I thought this was about fish?
+
+
+    Win a game of Koi-Koi against a bot opponent or another defuser online!
+
+
+    TP supported
+
+
+    Manual: https://ktane.timwi.de/HTML/Koi-Koi.html
+
+    Module ID: qkKoiKoi
+
+    Source code: https://github.com/qkrisi/ktanemod-koi-koi
+
+
+    Huge thanks to ulia for letting me use her models from her Hanafuda Tabletop Simulator
+    mod: https://steamcommunity.com/sharedfiles/filedetails/?id=1702440032'
+  version: 1.0
+  outputFolder: /home/qkrisi/.steam/steam/steamapps/common/Keep Talking and Nobody
+    Explodes/mods
+  previewImage: {fileID: 2800000, guid: 63bb3634e2e354e01b34db7c3d0af87e, type: 3}
