@@ -42,6 +42,16 @@ public class KoiKoiModule : MonoBehaviour
     void Awake()
 #endif
     {
+        if(KoiKoiService.Instance == null)
+            StartCoroutine(WaitForService());
+        else
+        {
+            ServiceInit();
+        }
+    }
+
+    void ServiceInit()
+    {
         Selectable = GetComponent<KMSelectable>();
         Audio = GetComponent<KMAudio>();
         ModuleIDCounter = 0;
@@ -62,12 +72,21 @@ public class KoiKoiModule : MonoBehaviour
             }
         }
     }
+
+    IEnumerator WaitForService()
+    {
+        yield return new WaitWhile(() => KoiKoiService.Instance == null);
+        ServiceInit();
+    }
     
-    void Start()
+    IEnumerator Start()
     {
 #if UNITY_EDITOR
         Awake_TH();     //Let KoiKoiService initialize first
 #endif
+        yield return new WaitWhile(() => KoiKoiService.Instance == null);
+        yield return null;
+        yield return null;
         ModuleID = ++ModuleIDCounter;
         KoiKoiService.Instance.RegisterForSearch(this);
         Monitor.gameObject.layer = 11;
